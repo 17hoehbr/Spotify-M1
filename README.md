@@ -1,80 +1,23 @@
-# apple-music-electron
-![preview.png](https://raw.githubusercontent.com/17hoehbr/apple-music-electron/master/preview.png)
-![preview_dark.png](https://raw.githubusercontent.com/17hoehbr/apple-music-electron/master/preview_dark.png)
+# Spotify-M1
 =======
-A desktop client for Apple Music using Electron.
+An ARM64 native Spotify desktop app for M1 Macs
 
-Initially created for Linux since iTunes is not available, but also compiled for Windows for those who find iTunes too bloated. Unlike iTunes this app should comply with Windows 10's Dark Mode.
+Based on my [apple-music-electron](https://github.com/17hoehbr/apple-music-electron) project for Linux.
 
 # Usage
 
-Should be pretty straightforward. Since it's just an electron wrapper of Apple's website all features available will obviously be limited to those on Apple music's webplayer (i.e. no playlist creation).
-
-By default electron loads beta.music.apple.com instead of the stable version because it seems to run much smoother in my testing, but if this ever raises any issues it can be disabled by clicking Alt then going to the Settings tab in the top menu that will appear.
-
-Electron should also detect your native desktop theme and automatically apply dark mode if applicable, but this can also be manually toggled in the Settings menu.
-
-Streamer Mode:
- * Resize window to minimum size
- * Add WindowCapture in OBS
- * Set Window to Apple Music Window
- * Set Crop Top to ~50px
- * [Result](https://raw.githubusercontent.com/17hoehbr/apple-music-electron/master/stream_preview.png)
-
-# Install
-
-Pre-compiled binaries available on the [release page](https://github.com/17hoehbr/apple-music-electron/releases).
-
-**Debian / Ubuntu:**
-
-Use the Generic Linux instructions instead if you want automatic updates. Will get around to making a PPA eventually.
-
-  * Download latest deb [release](https://github.com/17hoehbr/apple-music-electron/releases)
-  
-  * Navigate to download directory (ex. /home/USERNAME/Downloads)
-  
-    * ```$ cd ~/Downloads```
-  
-    * ```$ dpkg -i apple-music-electron_*.deb```
-  
-  
-**Arch / Manjaro:**
-  
-  * Install [apple-music-electron](https://aur.archlinux.org/packages/apple-music-electron/) from the AUR
-
-    * ```$ yay -S apple-music-electron```
-    
-**Solus:**
-
-  * Download latest deb [release](https://github.com/17hoehbr/apple-music-electron/releases)
-  * Extract deb file
-    * ```$ ar vx apple-music-electron_*.deb```
-  * Extract data archive
-    * ```$ mkdir data && tar -xf data.tar.xz -C data && cd data```
-  * Move contents to the appropriate location in your file manager (as root/sudo)
-    * **IMPORTANT: Make sure you choose a file manager that allows the merging of folders to avoid any errors.**
-
-**Generic Linux:**
-
-May take longer to launch than native packages due to auto updating
-
-  * Use [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher) to install latest [AppImage release](https://github.com/17hoehbr/apple-music-electron/releases)
-  
-**Windows:**
-
-  * Download and run [apple-music-electron-Setup-*.exe](https://github.com/17hoehbr/apple-music-electron/releases)
-  
+Currently does not compile as I'm waiting for Widevine to update support for ARM Macs but I will compile a working release as soon as its ready.
   
 # Building from source
 Requirements: YARN https://classic.yarnpkg.com/en/docs/install
 
 1. Clone project
 
-```$ git clone https://github.com/17hoehbr/apple-music-electron.git```
+```$ git clone https://github.com/17hoehbr/Spotify-M1.git```
 
 2. Navigate to folder 
 
-```$ cd apple-music-electron```
+```$ cd Spotify-M1```
 
 3. Install dependencies
 
@@ -87,14 +30,9 @@ Requirements: YARN https://classic.yarnpkg.com/en/docs/install
 Alternatively you can run the app directly from source using
 ```$ yarn start```
 
-Additional outputs can be configured by modifying the target value in package.json. All options can be found here https://www.electron.build/configuration/linux
 
 # Credits
 
 Made with [Electron-Builder](https://www.electron.build/).
 
-Icon created by [Tristan Edwards](https://dribbble.com/tristanedwards) and used under the [CC Attribute license](https://creativecommons.org/licenses/by/3.0/). No modifications have been made.
-
-DRM support is provided by a custom version of electron by [castlabs](https://github.com/castlabs/electron-releases/).
-
-Used IsmaelMartinez' unofficial [teams-for-linux client](https://github.com/IsmaelMartinez/teams-for-linux) as a reference for package.json layout.
+DRM support will be provided by a custom version of electron by [castlabs](https://github.com/castlabs/electron-releases/).
