@@ -1,5 +1,5 @@
 # Spotify-M1
-=======
+
 An ARM64 native Spotify desktop app for M1 Macs
 
 Based on my [apple-music-electron](https://github.com/17hoehbr/apple-music-electron) project for Linux.
