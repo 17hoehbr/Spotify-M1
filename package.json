@@ -1,5 +1,5 @@
 {
-  "name": "spotify-m1",
+  "name": "Spotify",
   "version": "1.0.0",
   "main": "index.js",
   "description": "Spotify Native for M1 Macs",
@@ -24,18 +24,18 @@
     "dist": "electron-builder"
   },
   "dependencies": {
-    "electron-updater": "4.3.5",
+    "electron-updater": "4.3.9",
     "electron-window-state": "5.0.3",
-    "electron-prompt": "1.6.0",
-    "express": "^4.17.1",
-    "express-asset-file-cache-middleware": "^1.3.0",
-    "v8-compile-cache": "^2.2.0"
+    "electron-prompt": "1.6.2",
+    "express": "4.17.1",
+    "express-asset-file-cache-middleware": "1.3.0",
+    "v8-compile-cache": "2.3.0"
   },
   "devDependencies": {
-    "electron": "https://github.com/castlabs/electron-releases#v13.0.0-wvvmp-beta.5",
-    "electron-builder": "^22.7.0",
-    "electron-webpack": "^2.8.2",
-    "webpack": "~4.42.1"
+    "electron": "https://github.com/castlabs/electron-releases#v13.0.1-wvvmp",
+    "electron-builder": "22.11.5",
+    "electron-webpack": "2.8.2",
+    "webpack": "5.37.1"
   },
   "build": {
     "electronDownload": {
