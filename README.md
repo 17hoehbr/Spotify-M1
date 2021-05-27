@@ -6,8 +6,8 @@ Based on my [apple-music-electron](https://github.com/17hoehbr/apple-music-elect
 
 # Usage
 
-Currently does not compile as I'm waiting for Widevine to update support for ARM Macs but I will compile a working release as soon as its ready.
-  
+As of latest commit it now compiles however Spotify web player blocks electron browsers for some reason. I tried changing the User Agent which can sometimes let me glitch my way into the web player but songs do not play. I think the issue has something to do with when the URL changes during login.
+
 # Building from source
 Requirements: YARN https://classic.yarnpkg.com/en/docs/install
 
